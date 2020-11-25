@@ -14,6 +14,13 @@ steps{
 echo "Testing the Project.........."
 }
 }
+stage('Git_Checkout')
+{
+steps
+{
+git credentialsId: '77f0aca0-99aa-4171-a730-5237078f174b', url: 'https://github.com/MoinakD-dev/jenkinspipeline'
+}
+}
 stage('Deploy') 
 {
 steps{
