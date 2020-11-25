@@ -21,6 +21,14 @@ steps
 git credentialsId: '77f0aca0-99aa-4171-a730-5237078f174b', url: 'https://github.com/MoinakD-dev/jenkinspipeline'
 }
 }
+stage('Maven_clean_install')
+{
+steps
+{
+sh "mvn clean package"
+}
+}
+
 stage('Deploy') 
 {
 steps{
